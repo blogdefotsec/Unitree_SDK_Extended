@@ -129,6 +129,20 @@ public:
         for (int i = 0; i < init_time_steps; ++i) {
             // Set weight to 1.0 (full control)
             msg_.motor_cmd().at(JointIndex::kNotUsedJoint).q(1.0f);
+            msg_.motor_cmd().at(JointIndex::kLeftHipPitch).q(1.0f);
+            msg_.motor_cmd().at(JointIndex::kLeftHipRoll).q(1.0f);
+            msg_.motor_cmd().at(JointIndex::kLeftHipYaw).q(1.0f);
+            msg_.motor_cmd().at(JointIndex::kLeftKnee).q(1.0f);
+            msg_.motor_cmd().at(JointIndex::kLeftAnkle).q(1.0f);
+            msg_.motor_cmd().at(JointIndex::kLeftAnkleRoll).q(1.0f);
+            msg_.motor_cmd().at(JointIndex::kRightHipPitch).q(1.0f);
+            msg_.motor_cmd().at(JointIndex::kRightHipRoll).q(1.0f);
+            msg_.motor_cmd().at(JointIndex::kRightHipYaw).q(1.0f);
+            msg_.motor_cmd().at(JointIndex::kRightKnee).q(1.0f);
+            msg_.motor_cmd().at(JointIndex::kRightAnkle).q(1.0f);
+            msg_.motor_cmd().at(JointIndex::kRightAnkleRoll).q(1.0f);
+
+
 
             float phase = 1.0f * i / init_time_steps;
 
